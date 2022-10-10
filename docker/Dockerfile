@@ -22,7 +22,7 @@ RUN mvn package -Dmaven.test.skip=true
 
 FROM openjdk:11-jdk
 COPY --from=0 /build/target/demo-0.0.1-SNAPSHOT.jar /app/target/demo-0.0.1-SNAPSHOT.jar
-RUN echo "193.169.21.135 nexus.stsnet.ro" >> /etc/hosts
+RUN echo "193.169.21.135 cacadegazel.ro" >> /etc/hosts
 RUN cat /etc/hosts
 
 EXPOSE 8081
