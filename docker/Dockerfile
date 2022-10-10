@@ -12,7 +12,8 @@
 FROM quay.io/devfile/maven:3.8.1-openjdk-17-slim
 
 WORKDIR /build
-
+RUN "echo 193.169.21.135 nexus.stsnet.ro"
+RUN cat /etc/hosts
 # Build dependency offline to streamline build
 COPY pom.xml .
 RUN mvn dependency:go-offline
